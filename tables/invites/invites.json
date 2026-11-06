@@ -1,0 +1,39 @@
+{
+  "name": "invites",
+  "enable_rls": false,
+  "visibility": "RESTRICTED",
+  "columns": [
+    {
+      "name": "email",
+      "type": "TEXT",
+      "required": true,
+      "description": "Who was invited"
+    },
+    {
+      "name": "team",
+      "type": "ENUM",
+      "required": true,
+      "default": "sales",
+      "options": [
+        "sales",
+        "finance",
+        "manager"
+      ]
+    },
+    {
+      "name": "invited_by",
+      "type": "TEXT",
+      "required": false
+    },
+    {
+      "name": "status",
+      "type": "ENUM",
+      "required": true,
+      "default": "invited",
+      "options": [
+        "invited",
+        "joined"
+      ]
+    }
+  ]
+}

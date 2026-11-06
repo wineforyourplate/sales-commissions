@@ -1,0 +1,20 @@
+{
+  "name": "on-decision",
+  "schedule_type": "DATASTORE",
+  "config": {
+    "table_name": "deals",
+    "operations": [
+      "UPDATE"
+    ],
+    "when": {
+      "status": {
+        "from": "waiting",
+        "changed": true
+      }
+    }
+  },
+  "instruction": "Job 2: finance just approved or didn't approve the deal in this event. Tell its salesperson.",
+  "agent_name": "tally",
+  "is_active": true,
+  "visibility": "POD"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "morning-list",
+  "schedule_type": "TIME",
+  "config": {
+    "cron": "30 9 * * 1-5",
+    "timezone": "Asia/Kolkata"
+  },
+  "instruction": "Job 3: send the Finance team the morning list of deals waiting for approval.",
+  "agent_name": "tally",
+  "is_active": true,
+  "visibility": "POD"
+}

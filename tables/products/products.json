@@ -1,0 +1,25 @@
+{
+  "name": "products",
+  "enable_rls": false,
+  "visibility": "RESTRICTED",
+  "columns": [
+    {
+      "name": "name",
+      "type": "TEXT",
+      "required": true,
+      "description": "What salespeople pick when they log a deal"
+    },
+    {
+      "name": "active",
+      "type": "BOOLEAN",
+      "required": true,
+      "description": "Off hides it from the list",
+      "default": true
+    },
+    {
+      "name": "notes",
+      "type": "TEXT",
+      "required": false
+    }
+  ]
+}

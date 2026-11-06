@@ -1,0 +1,38 @@
+{
+  "name": "settings",
+  "enable_rls": false,
+  "visibility": "RESTRICTED",
+  "columns": [
+    {
+      "name": "company",
+      "type": "TEXT",
+      "required": false,
+      "description": "Shown at the top of the app"
+    },
+    {
+      "name": "currency_symbol",
+      "type": "TEXT",
+      "required": false,
+      "default": "₹"
+    },
+    {
+      "name": "locale",
+      "type": "TEXT",
+      "required": false,
+      "description": "Number format, e.g. en-IN or en-US",
+      "default": "en-IN"
+    },
+    {
+      "name": "finance_emails",
+      "type": "TEXT",
+      "required": false,
+      "description": "Who gets the morning list (the Finance team), comma separated. The app keeps this up to date"
+    },
+    {
+      "name": "setup",
+      "type": "JSON",
+      "required": false,
+      "description": "What the app has set up: access version, getting-started steps"
+    }
+  ]
+}

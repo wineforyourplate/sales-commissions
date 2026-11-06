@@ -1,0 +1,13 @@
+{
+  "name": "seen",
+  "enable_rls": true,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "what",
+      "type": "TEXT",
+      "required": true,
+      "description": "An intro or tour this person has seen, e.g. intro:sales"
+    }
+  ]
+}

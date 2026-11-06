@@ -1,0 +1,92 @@
+{
+  "name": "commissions",
+  "enable_rls": false,
+  "visibility": "RESTRICTED",
+  "columns": [
+    {
+      "name": "deal_id",
+      "type": "UUID",
+      "required": true,
+      "description": "The approved deal"
+    },
+    {
+      "name": "customer",
+      "type": "TEXT",
+      "required": false
+    },
+    {
+      "name": "product",
+      "type": "TEXT",
+      "required": false
+    },
+    {
+      "name": "rep_name",
+      "type": "TEXT",
+      "required": true
+    },
+    {
+      "name": "rep_email",
+      "type": "TEXT",
+      "required": true
+    },
+    {
+      "name": "base",
+      "type": "FLOAT",
+      "required": true,
+      "description": "Money received the commission is paid on"
+    },
+    {
+      "name": "rate",
+      "type": "FLOAT",
+      "required": true,
+      "description": "Percent"
+    },
+    {
+      "name": "amount",
+      "type": "FLOAT",
+      "required": true,
+      "description": "Commission earned"
+    },
+    {
+      "name": "rule_used",
+      "type": "TEXT",
+      "required": false
+    },
+    {
+      "name": "month",
+      "type": "TEXT",
+      "required": true,
+      "description": "YYYY-MM the deal was approved in"
+    },
+    {
+      "name": "status",
+      "type": "ENUM",
+      "required": true,
+      "default": "approved",
+      "options": [
+        "approved",
+        "paid_out"
+      ]
+    },
+    {
+      "name": "approved_by",
+      "type": "TEXT",
+      "required": false
+    },
+    {
+      "name": "approved_by_email",
+      "type": "TEXT",
+      "required": false
+    },
+    {
+      "name": "approved_at",
+      "type": "DATETIME",
+      "required": false
+    },
+    {
+      "name": "paid_out_on",
+      "type": "DATE",
+      "required": false
+    }
+  ]
+}

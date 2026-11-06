@@ -1,0 +1,154 @@
+{
+  "name": "deals",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "customer",
+      "type": "TEXT",
+      "required": true,
+      "description": "Who bought"
+    },
+    {
+      "name": "customer_email",
+      "type": "TEXT",
+      "required": false,
+      "description": "Customer contact, optional"
+    },
+    {
+      "name": "product",
+      "type": "TEXT",
+      "required": false,
+      "description": "What was sold. A product rate applies when it matches a product's name"
+    },
+    {
+      "name": "amount",
+      "type": "FLOAT",
+      "required": true,
+      "description": "Deal value before tax"
+    },
+    {
+      "name": "closed_on",
+      "type": "DATE",
+      "required": false,
+      "description": "Date the deal closed"
+    },
+    {
+      "name": "payment_status",
+      "type": "ENUM",
+      "required": true,
+      "description": "What the customer has paid so far",
+      "default": "paid_in_full",
+      "options": [
+        "paid_in_full",
+        "part_paid",
+        "not_paid"
+      ]
+    },
+    {
+      "name": "amount_received",
+      "type": "FLOAT",
+      "required": false,
+      "description": "Money received so far, before tax. Commission is paid on this"
+    },
+    {
+      "name": "payment_ref",
+      "type": "TEXT",
+      "required": false,
+      "description": "Invoice number or payment reference finance can check"
+    },
+    {
+      "name": "notes",
+      "type": "TEXT",
+      "required": false,
+      "description": "Anything finance should know"
+    },
+    {
+      "name": "rep_name",
+      "type": "TEXT",
+      "required": true,
+      "description": "Salesperson: the person who logged it"
+    },
+    {
+      "name": "rep_email",
+      "type": "TEXT",
+      "required": true,
+      "description": "Salesperson's sign-in email"
+    },
+    {
+      "name": "logged_via",
+      "type": "TEXT",
+      "required": false,
+      "description": "app, or the channel Tally received it on (email, Slack, WhatsApp...)"
+    },
+    {
+      "name": "status",
+      "type": "ENUM",
+      "required": true,
+      "description": "Where the deal is",
+      "default": "waiting",
+      "options": [
+        "waiting",
+        "approved",
+        "rejected"
+      ]
+    },
+    {
+      "name": "check_status",
+      "type": "ENUM",
+      "required": false,
+      "description": "Tally's check",
+      "options": [
+        "looks_right",
+        "needs_a_look"
+      ]
+    },
+    {
+      "name": "check_note",
+      "type": "TEXT",
+      "required": false,
+      "description": "What Tally found, in one sentence"
+    },
+    {
+      "name": "expected_commission",
+      "type": "FLOAT",
+      "required": false,
+      "description": "Commission the plan gives, worked out when the deal is logged"
+    },
+    {
+      "name": "expected_rate",
+      "type": "FLOAT",
+      "required": false,
+      "description": "Rate the plan gives, as a percent"
+    },
+    {
+      "name": "rule_used",
+      "type": "TEXT",
+      "required": false,
+      "description": "Which part of the plan set the rate"
+    },
+    {
+      "name": "reviewed_by",
+      "type": "TEXT",
+      "required": false,
+      "description": "Name of the person who approved or rejected it"
+    },
+    {
+      "name": "reviewed_by_email",
+      "type": "TEXT",
+      "required": false,
+      "description": "Their sign-in email"
+    },
+    {
+      "name": "reviewed_at",
+      "type": "DATETIME",
+      "required": false
+    },
+    {
+      "name": "finance_note",
+      "type": "TEXT",
+      "required": false,
+      "description": "Reason, when finance doesn't approve"
+    }
+  ]
+}

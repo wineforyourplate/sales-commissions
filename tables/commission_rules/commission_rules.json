@@ -1,0 +1,50 @@
+{
+  "name": "commission_rules",
+  "enable_rls": false,
+  "visibility": "RESTRICTED",
+  "columns": [
+    {
+      "name": "label",
+      "type": "TEXT",
+      "required": true,
+      "description": "Plain name shown to people"
+    },
+    {
+      "name": "applies_to",
+      "type": "ENUM",
+      "required": true,
+      "description": "Who or what the rule covers",
+      "default": "everyone",
+      "options": [
+        "everyone",
+        "product",
+        "salesperson",
+        "monthly_bonus"
+      ]
+    },
+    {
+      "name": "match",
+      "type": "TEXT",
+      "required": false,
+      "description": "Product name, or the salesperson's sign-in email"
+    },
+    {
+      "name": "rate",
+      "type": "FLOAT",
+      "required": true,
+      "description": "Percent of the money received"
+    },
+    {
+      "name": "threshold",
+      "type": "FLOAT",
+      "required": false,
+      "description": "Monthly bonus only: approved sales in a month above which the extra rate applies"
+    },
+    {
+      "name": "active",
+      "type": "BOOLEAN",
+      "required": true,
+      "default": true
+    }
+  ]
+}

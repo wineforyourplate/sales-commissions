@@ -1,0 +1,6 @@
+{
+  "name": "sales-commissions",
+  "description": "One app for the whole team: salespeople log deals and see their commission, finance approves and pays out, managers see everything and set the plan.",
+  "public_slug": "sales-commissions",
+  "visibility": "POD"
+}

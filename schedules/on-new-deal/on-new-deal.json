@@ -1,0 +1,14 @@
+{
+  "name": "on-new-deal",
+  "schedule_type": "DATASTORE",
+  "config": {
+    "table_name": "deals",
+    "operations": [
+      "INSERT"
+    ]
+  },
+  "instruction": "Job 1: a deal was just logged (the one in this event). Price it, check it, and write your check on it.",
+  "agent_name": "tally",
+  "is_active": true,
+  "visibility": "POD"
+}

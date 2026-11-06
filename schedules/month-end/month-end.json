@@ -1,0 +1,12 @@
+{
+  "name": "month-end",
+  "schedule_type": "TIME",
+  "config": {
+    "cron": "0 9 1 * *",
+    "timezone": "Asia/Kolkata"
+  },
+  "instruction": "Job 4: send the month-end statements for the month that just ended.",
+  "agent_name": "tally",
+  "is_active": true,
+  "visibility": "POD"
+}
